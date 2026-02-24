@@ -1,60 +1,94 @@
 # Student Portfolio Builder
 
-## Pages & Features
+Create and showcase student project portfolios.
 
-### 1. Public Portfolio Page
-- Student name, bio, photo, and tagline
-- Skills & technologies list
-- Project showcase grid with thumbnails
-- Education timeline
-- Contact form / social links
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
 
-### 2. Dashboard
-- Portfolio views & visitor stats
-- Project count & completion status
-- Quick edit shortcuts
-- Share link & QR code
+## Tech Stack
 
-### 3. Profile Editor
-- Edit name, bio, headline, photo
-- Social links (GitHub, LinkedIn, Twitter, personal site)
-- Skills / technologies with proficiency level
-- Resume / CV upload
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
 
-### 4. Projects
-- Add / edit / delete projects
-- Project detail: title, description, role, technologies used
-- Upload screenshots, videos, or live demo link
-- GitHub repository link
-- Tag projects by category (web, mobile, data, design)
-- Reorder projects (drag-and-drop)
+## Getting Started
 
-### 5. Education & Experience
-- Add education entries (school, degree, dates, GPA)
-- Add work experience (company, role, dates, description)
-- Certifications & awards
-- Timeline visualization
+```bash
+npm install
+cp .env.example .env.local
+# Set VITE_CONVEX_URL to your deployment URL
+npm run dev
+```
 
-### 6. Blog / Journal
-- Write articles or learning reflections
-- Markdown editor with preview
-- Tag & categorize posts
-- Publish / draft toggle
+## License
 
-### 7. Templates & Themes
-- Choose from portfolio layout templates
-- Customize colors, fonts, and spacing
-- Dark / light mode toggle
-- Preview before publishing
+MIT © Mehdi Nabhani
 
-### 8. Analytics
-- Page views over time
-- Most viewed projects
-- Visitor geographic distribution
-- Referral sources
+---
 
-### 9. Settings
-- Custom domain configuration
-- SEO settings (title, description, OG image)
-- Privacy (public / password-protected / private)
-- Account management
+<details>
+<summary>📋 Original Feature Spec</summary>
+
+# {{APP_TITLE}}
+
+{{APP_DESCRIPTION}}
+
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
+
+## Tech Stack
+
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 22+
+- A running [shared Convex backend](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+
+### Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Create .env.local with your Convex URL
+cp .env.example .env.local
+# Edit .env.local and set VITE_CONVEX_URL to your deployment URL
+
+# Start the dev server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) to view the app.
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start Vite dev server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run typecheck` | Run TypeScript type checking |
+
+## Project Structure
+
+```
+src/
+  main.tsx              # Entry point with ConvexAuthProvider
+  App.tsx               # Auth routing (Landing vs Dashboard)
+  App.css               # Component styles
+  index.css             # Global styles & design tokens
+  components/
+    Landing.tsx          # Marketing/landing page
+    SignIn.tsx           # Auth form (sign-in/sign-up)
+    Dashboard.tsx        # Authenticated app shell
+api.ts                   # Convex API types (from shared backend)
+```
+
+## License
+
+MIT © Mehdi Nabhani
+
+</details>
